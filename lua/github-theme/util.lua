@@ -200,7 +200,7 @@ function util.load(theme)
   if vim.fn.exists("syntax_on") then vim.cmd("syntax reset") end
 
   vim.o.termguicolors = true
-  vim.g.colors_name = "github"
+  vim.g.colors_name = "github_" .. theme.config.theme_style
   -- vim.api.nvim__set_hl_ns(ns)
   -- load base theme
   util.syntax(theme.base)
